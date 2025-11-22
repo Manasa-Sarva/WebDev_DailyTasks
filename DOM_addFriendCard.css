@@ -1,0 +1,45 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+
+    height: 100%;
+}
+
+body {
+
+    background-color: #aaa0a0df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: normal;
+
+}
+
+#card {
+
+    background-color: white;
+    /* border-radius: 10px; */
+    text-align: center;
+    padding: 20px 40px;
+}
+
+button {
+
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+h5 { 
+    margin-top: 5px;
+}
+
+img { 
+
+    width: 200px;
+    height: 200px;
+} 
