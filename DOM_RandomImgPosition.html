@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image Generator</title>
+
+    <style>
+        body {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+
+        }
+
+        .random-img {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+<button>Create Image</button>
+
+<script>
+    var body = document.querySelector('body')
+    var btn = document.querySelector('button')
+
+    btn.addEventListener('click', function() {
+ // Create the image element
+        const img = document.createElement("img");
+        
+        img.src = "https://clipart-library.com/images/8cE6KoBKi.png"; // sample image 
+        img.className = "random-img";
+
+        // Get random positions within the screen
+        const randomX = Math.random() * (window.innerWidth - 80);
+        const randomY = Math.random() * (window.innerHeight - 80);
+
+        // Apply absolute positions
+        img.style.left = randomX + "px";
+        img.style.top = randomY + "px";
+
+        // Add to page
+        document.body.appendChild(img);
+    }
+)
+</script>
+
+</body>
+</html>
