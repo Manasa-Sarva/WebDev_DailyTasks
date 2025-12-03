@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Cursor | DOM </title>
+
+<style>
+
+* {
+
+ padding: 0%;
+ margin: 0%;
+ box-sizing: border-box;
+
+}
+
+body,html {
+
+height: 100%;
+width: 100%;
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#customCursor {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  pointer-events: none; 
+  display: none; 
+}
+
+.box {
+  width: 400px;
+  height: 300px;
+  background-color: hsl(312, 11%, 91%);
+  border: 2px solid rgba(0, 0, 0, 0.318);
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+}
+    
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+  Hover inside this box to activate <br>custom image cursor
+</div>
+
+<img id="customCursor" src="https://clipart-library.com/images/8cE6KoBKi.png" />
+
+
+<script>
+const box = document.querySelector(".box");
+const cursorImg = document.getElementById("customCursor");
+
+// show image when mouse enters the box
+box.addEventListener("mouseenter", () => {
+  cursorImg.style.display = "block";
+});
+
+// hide image when mouse leaves the box
+box.addEventListener("mouseleave", () => {
+  cursorImg.style.display = "none";
+});
+
+// move the image with the mouse
+box.addEventListener("mousemove", (e) => {
+  cursorImg.style.left = e.pageX + "px";
+  cursorImg.style.top = e.pageY + "px";
+});
+
+</script>
+
+</body>
+</html> 
+
