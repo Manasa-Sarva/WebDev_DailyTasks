@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach | JSON Format</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            { 
+                username:"Manasa",
+                age : 25,
+                married : false,
+            
+            },
+            { 
+                username:"Pavani",
+                age : 24,
+                married : false,
+            
+            },
+            { 
+                username:"Lasya",
+                age : 24,
+                married : false,
+            
+            },
+            { 
+                username:"Varshitha",
+                age : 24,
+                married : true,            
+            }
+        ]
+        
+        var sum = 0
+        arr.forEach(function(e){
+            sum=sum+e.age
+        })
+        console.log(`Sum of ages : ` + sum)
+    </script>
+</body>
+</html>

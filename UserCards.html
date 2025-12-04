@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic User Cards | Arrays</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        body,html {
+            height: 100%;
+            width: 100%;
+        }
+        #main {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(183, 183, 183);
+            display: flex;
+            align-items: center;   
+            justify-content: center;    
+            gap: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .card {
+            height: 350px;
+            width: 250px;
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="card"></div>
+    </div>   
+    <script src="UserCards.js"></script>
+</body>
+</html>
