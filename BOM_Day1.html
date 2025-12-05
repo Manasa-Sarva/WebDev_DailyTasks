@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM | Day1</title>
+</head>
+<body>
+
+    <button id="btn1">Backward</button>
+    <button id="btn2">Forwards</button> <br><br>
+
+    <button id="btn">Reload</button> 
+    <button id="btn0">Linkedin</button> 
+
+    <script>
+
+        var btn = document.querySelector("#btn")
+        var btn0 = document.querySelector("#btn0")
+
+        var btn1 = document.querySelector("#btn1")
+        var btn2 = document.querySelector("#btn2")
+        btn1.addEventListener('click',function(){
+            history.back()
+        })
+        btn2.addEventListener('click',function(){
+            history.forward()
+        })
+
+        btn.addEventListener('click',function(){
+            location.reload()
+        })
+
+        btn0.addEventListener("click",function(){
+            location.href='https://www.linkedin.com/in/sarvamanasa/'
+        }) 
+
+        console.log(navigator.onLine)      /* To check connectivity */
+        
+        console.log(navigator.userAgent)   /* To check Browser Details */
+        
+        localStorage.setItem('user', 'Manasa') 
+        localStorage,setItem('age',25)    /* To save values in local storage */
+
+        var user=localStorage.getItem('User')
+        console.log(User)
+
+        localStorage.removeItem('age')     /* To remove items from LocalStorage */
+
+        sessionStorage.setItem('user', 'Mahesh Babu') /* To save values in session storage */
+        
+    </script>
+    
+</body>
+</html>
